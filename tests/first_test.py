@@ -17,6 +17,11 @@ class FirstTestCase(unittest.TestCase):
         rv=self.login('admin','default')
         assert b'login successful' in rv.data
 
+    def test_session(self):
+        with self.app.session_transaction() as sess:
+            sess['a']=123465
+        self.app.get('/login')
+
 
 if __name__=='__main__':
     unittest.main()

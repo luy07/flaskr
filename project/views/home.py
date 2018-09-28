@@ -1,4 +1,5 @@
-from flask import Blueprint, render_template, request, redirect, url_for, flash
+from flask import Blueprint, render_template, request, redirect, url_for, flash,session
+from flask import jsonify
 
 mod = Blueprint('home', __name__, url_prefix='/')
 
@@ -6,7 +7,6 @@ mod = Blueprint('home', __name__, url_prefix='/')
 @mod.route('/')
 @mod.route('/index')
 def hello_world():
-    # return 'Hello World!'
     return render_template('home/home.html')
 
 
@@ -17,6 +17,7 @@ def login():
         password = request.form['password']
         if username == 'admin' and password == 'default':
             flash('login successful')
+            session['logined']=True
             return redirect(url_for('backend.index'))
         else:
             flash('invalid username or password')
@@ -28,3 +29,7 @@ def login():
 @mod.route('error')
 def error_show():
     return render_template('error.html')
+
+@mod.route('jsontest')
+def jsontest():
+    return jsonify(msg='ok')

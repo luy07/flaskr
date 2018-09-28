@@ -1,4 +1,4 @@
-from flask import Blueprint,url_for,render_template,make_response,session,Markup
+from flask import Blueprint,url_for,render_template,make_response,session,Markup,current_app
 
 mod=Blueprint('backend',__name__,url_prefix='/backend')
 
@@ -6,7 +6,6 @@ mod=Blueprint('backend',__name__,url_prefix='/backend')
 @mod.route('/index')
 def index():
     tmpt = Markup.escape(u'<strong>Hello %s!</strong>' % '<blink>hacker</blink>')
-
     content= render_template('backend/index.html',tmpt=tmpt)
     resp=make_response(content)
     resp.set_cookie('username','luy')
@@ -17,4 +16,23 @@ def user_management():
     url= url_for('.index')
     session['username']='luyq'
     return render_template('backend/user_management.html',url=url)
+
+
+def has_no_empty_params(rule):
+    defaults = rule.defaults if rule.defaults is not None else ()
+    arguments = rule.arguments if rule.arguments is not None else ()
+    return len(defaults) >= len(arguments)
+
+@mod.route("/sitemap")
+def sitemap():
+    links=[]
+    for rule in current_app.url_map.iter_rules():
+        # Filter out rules we can't navigate to in a browser
+        # and rules that require parameters
+        if "GET" in rule.methods and has_no_empty_params(rule):
+            url = url_for(rule.endpoint, **(rule.defaults or {}))
+            links.append((url, rule.endpoint))
+    # links is now a list of url, endpoint tuples
+    return render_template('backend/sitemap.html', sitelinks=links)
+
 
