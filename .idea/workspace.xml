@@ -14,8 +14,8 @@
     <SUITE FILE_PATH="coverage/moon$Unittests_for_first_test.coverage" NAME="Unittests for first_test Coverage Results" MODIFIED="1537413770035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/moon$Unittests_for_first_test_FirstTestCase_test_first.coverage" NAME="Unittests for first_test.FirstTestCase.test_first Coverage Results" MODIFIED="1537414483406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/moon$moon.coverage" NAME="moon Coverage Results" MODIFIED="1537363453104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/moon$Unittests_in_first_test_py.coverage" NAME="Unittests in first_test.py Coverage Results" MODIFIED="1537600992399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/moon$run.coverage" NAME="run Coverage Results" MODIFIED="1537615760775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/moon$Unittests_in_first_test_py.coverage" NAME="Unittests in first_test.py Coverage Results" MODIFIED="1538122840038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/moon$test.coverage" NAME="test Coverage Results" MODIFIED="1537371082852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/moon$py_test_for_first_test_FirstTestCase_test_first.coverage" NAME="py.test for first_test.FirstTestCase.test_first Coverage Results" MODIFIED="1537371151915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/moon$uTest.coverage" NAME="uTest Coverage Results" MODIFIED="1537411658240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -183,7 +183,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="63" />
     <option name="y" value="27" />
     <option name="width" value="1444" />
@@ -206,7 +206,7 @@
             <path>
               <item name="moon" type="b2602c69:ProjectViewProjectNode" />
               <item name="moon" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -243,7 +243,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.run">
+  <component name="RunManager" selected="Python tests.Unittests in first_test.py">
     <configuration name="console_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="moon" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -351,9 +351,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests in first_test.py" />
         <item itemvalue="Python.run" />
         <item itemvalue="Python.console_test" />
-        <item itemvalue="Python tests.Unittests in first_test.py" />
         <item itemvalue="Python tests.Unittests for first_test.FirstTestCase.test_session" />
         <item itemvalue="Python tests.Unittests for first_test.FirstTestCase.test_first" />
       </list>
@@ -373,15 +373,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_first_test_py - 2018.09.20 at 11h 23m 49s.xml">
-      <configuration name="Unittests in first_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_first_test_py - 2018.09.20 at 11h 24m 51s.xml">
-      <configuration name="Unittests in first_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_first_test_py - 2018.09.20 at 11h 33m 50s.xml">
-      <configuration name="Unittests in first_test.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_first_test_FirstTestCase_test_first - 2018.09.20 at 11h 34m 44s.xml">
       <configuration name="Unittests for first_test.FirstTestCase.test_first" configurationId="tests" />
     </history-entry>
@@ -403,19 +394,27 @@
     <history-entry file="Unittests_in_first_test_py - 2018.09.22 at 15h 23m 13s.xml">
       <configuration name="Unittests in first_test.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_first_test_py - 2018.09.28 at 16h 20m 04s.xml">
+      <configuration name="Unittests in first_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_first_test_py - 2018.09.28 at 16h 20m 30s.xml">
+      <configuration name="Unittests in first_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_first_test_py - 2018.09.28 at 16h 20m 53s.xml">
+      <configuration name="Unittests in first_test.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50065106" side_tool="true" weight="0.32872927" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986979" weight="0.34392264" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4986979" visible="true" weight="0.34361702" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49934897" weight="0.32872927" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15989584" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15989584" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
