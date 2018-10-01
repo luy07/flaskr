@@ -1,20 +1,19 @@
 from sqlalchemy import create_engine, Column, Integer, String, DateTime, Float, Date
-from sqlalchemy.orm import sessionmaker,scoped_session
+from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy.ext.declarative import declarative_base
 from . import config
 
 engine = create_engine(config.DATABASE_URI, convert_unicode=True, **config.DATABASE_CONNECT_OPTIONS)
-db_session =scoped_session( sessionmaker(bind=engine, autocommit=False, autoflush=False))
 
 Model = declarative_base(name='Model')
 
-
 # Model.query = db_session.query_property()
+db_session = scoped_session(sessionmaker(bind=engine, autocommit=False, autoflush=False))
 
 
 def init_db():
+    Model.metadata.drop_all(bind=engine)
     Model.metadata.create_all(bind=engine)
-
 
 
 class TradeModel:
@@ -49,26 +48,31 @@ class Stock(Model):
     pe = Column(Float)  # 市盈率
     pb = Column(Float)  # 市净率
     # 总值
-    capitalization = Column(Integer)  # 市值
-    outstanding = Column(Integer)  # 流通股本(亿)
-    totals = Column(Integer)  # 总股本(亿)
+    capitalization = Column(Float)  # 市值
+    outstanding = Column(Float)  # 流通股本(亿)
+    totals = Column(Float)  # 总股本(亿)
     holders = Column(Integer)  # 股东人数
-    totalAssets = Column(Integer)  # 总资产(万)
-    liquidAssets = Column(Integer)  # 流动资产
-    fixedAssets = Column(Integer)  # 固定资产
-    reserved = Column(Integer)  # 公积金
-    undp = Column(Integer)  # 未分利润
+    totalAssets = Column(Float(10,5))  # 总资产(万)
+    liquidAssets = Column(Float(10,5))  # 流动资产
+    fixedAssets = Column(Float(10,5))  # 固定资产
+    reserved = Column(Float(10,5))  # 公积金
+    undp = Column(Float(10,5))  # 未分利润
     # 每股
-    reservedPerShare = Column(Float)  # 每股公积金
-    esp = Column(Float)  # 每股收益
-    bvps = Column(Float)  # 每股净资
-    pb = Column(Float)  # 市净率
-    perundp = Column(Float)  # 每股未分配
-    #利润&增长
+    reservedPerShare = Column(Float(10,5))  # 每股公积金
+    esp = Column(Float(10,5))  # 每股收益
+    bvps = Column(Float(10,5))  # 每股净资
+    pb = Column(Float(10,5))  # 市净率
+    perundp = Column(Float(10,5))  # 每股未分配
+    # 利润&增长
     gpr = Column(Float)  # 毛利率(%)
     npr = Column(Float)  # 净利润率(%)
     rev = Column(Float)  # 收入同比(%)
     profit = Column(Float)  # 利润同比(%)
+
+    def __init__(self, code):
+        if len(str(code))<6:
+            raise Exception(self,('Stock init fail,invalid code:%s,type:%s'% (code,type(code))))
+        self.code = code
 
 
 class DailyRecord(Model, TradeModel):
@@ -78,7 +82,7 @@ class DailyRecord(Model, TradeModel):
     date = Column(Date)
 
 
-class MinutelyRecord(Model,TradeModel):
+class MinutelyRecord(Model, TradeModel):
     __tablename__ = 'minutelyrecords'
     id = Column(Integer, primary_key=True)
     code = Column(String(10))
