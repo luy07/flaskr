@@ -1,10 +1,10 @@
 from sqlalchemy import create_engine, Column, Integer, String, DateTime, Float, Date
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker,scoped_session
 from sqlalchemy.ext.declarative import declarative_base
 from . import config
 
 engine = create_engine(config.DATABASE_URI, convert_unicode=True, **config.DATABASE_CONNECT_OPTIONS)
-db_session = sessionmaker(bind=engine, autocommit=False, autoflush=False)
+db_session =scoped_session( sessionmaker(bind=engine, autocommit=False, autoflush=False))
 
 Model = declarative_base(name='Model')
 
@@ -32,7 +32,7 @@ class TradeModel:
     relative_ratio = Column(Float)  # 量比
 
 
-class Stock(Model,TradeModel):
+class Stock(Model):
     __tablename__ = 'stocks'
     code = Column(String(50), primary_key=True)
     name = Column(String(50))
