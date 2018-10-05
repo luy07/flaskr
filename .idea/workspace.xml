@@ -10,15 +10,65 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/moon$stockmapper.coverage" NAME="stockmapper Coverage Results" MODIFIED="1538571576101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datamanager/tusharemapper" />
+    <SUITE FILE_PATH="coverage/moon$Unittests_in_tusharemapper_test_py.coverage" NAME="Unittests in tusharemapper_test.py Coverage Results" MODIFIED="1538641080108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/moon$Unittests_for_first_test_FirstTestCase.coverage" NAME="Unittests for first_test.FirstTestCase Coverage Results" MODIFIED="1538645605121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/tests" />
+    <SUITE FILE_PATH="coverage/moon$Unittests_in_first_test_py.coverage" NAME="Unittests in first_test.py Coverage Results" MODIFIED="1538645598453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/tests" />
+    <SUITE FILE_PATH="coverage/moon$Unittests_for_stockmapper_test_StockMapper_TestCase_test_stock_sync_fromcsv.coverage" NAME="Unittests for stockmapper_test.StockMapper_TestCase.test_stock_sync_fromcsv Coverage Results" MODIFIED="1538648992057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datamanager/tests" />
+    <SUITE FILE_PATH="coverage/moon$Unittests_in_stockmapper_test_py.coverage" NAME="Unittests in stockmapper_test.py Coverage Results" MODIFIED="1538655818985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datamanager/tests" />
+    <SUITE FILE_PATH="coverage/moon$Unittests_for_stockmapper_test_StockMapper_TestCase_test_stocksync_insert_fromcsv.coverage" NAME="Unittests for stockmapper_test.StockMapper_TestCase.test_stocksync_insert_fromcsv Coverage Results" MODIFIED="1538655068788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datamanager/tests" />
+    <SUITE FILE_PATH="coverage/moon$stockmapper.coverage" NAME="stockmapper Coverage Results" MODIFIED="1538642604964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datamanager/tusharemapper" />
+    <SUITE FILE_PATH="coverage/moon$Unittests_for_datamanager_tusharemapper_test_TushareMapper_TestCase_test_stock_sync_fromcsv.coverage" NAME="Unittests for datamanager.tusharemapper_test.TushareMapper_TestCase.test_stock_sync_fromcsv Coverage Results" MODIFIED="1538644234558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/moon$Unittests_for_stockmapper_test_StockMapper_TestCase_test_stocksync_update.coverage" NAME="Unittests for stockmapper_test.StockMapper_TestCase.test_stocksync_update Coverage Results" MODIFIED="1538654970634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datamanager/tests" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="database.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/database.py">
+      <file leaf-file-name="stockmapper_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/datamanager/tests/stockmapper_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1166">
-              <caret line="10" column="89" lean-forward="true" selection-start-line="10" selection-start-column="89" selection-end-line="10" selection-end-column="89" />
+            <state relative-caret-position="106">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="case.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.PyCharm2018.1/system/remote_sources/-1743092470/201545290/unittest/case.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1098">
+              <caret line="602" column="35" lean-forward="true" selection-start-line="602" selection-start-column="35" selection-end-line="602" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stockmapper.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/datamanager/tusharemapper/stockmapper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="90" column="77" selection-start-line="90" selection-start-column="77" selection-end-line="90" selection-end-column="77" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stockreader.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/datamanager/datareader/stockreader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="61" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/datamanager/database.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="29" />
               <folding>
                 <element signature="e#0#93#0" expanded="true" />
               </folding>
@@ -30,24 +80,28 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="44">
-              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stockmapper.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/datamanager/tusharemapper/stockmapper.py">
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/datamanager/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="76" column="51" lean-forward="true" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="13" selection-start-column="13" selection-end-column="72" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -55,6 +109,7 @@
       <find>Float</find>
       <find>Float(10,2)</find>
       <find>row['code']</find>
+      <find>row.name</find>
     </findStrings>
     <replaceStrings>
       <replace>DECIMAL(10,3)</replace>
@@ -63,13 +118,22 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="WARN_ABOUT_CRLF" value="false" />
+    <option name="WARN_ABOUT_DETACHED_HEAD" value="false" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/project/database.py" />
+        <option value="$PROJECT_DIR$/datamanager/tusharemapper/dailyrecordmapper.py" />
+        <option value="$PROJECT_DIR$/datamanager/tusharemapper_test.py" />
+        <option value="$PROJECT_DIR$/project/tests/first_test.py" />
+        <option value="$PROJECT_DIR$/datamanager/datareader/stockreader.py" />
         <option value="$PROJECT_DIR$/datamanager/tusharemapper/stockmapper.py" />
+        <option value="$PROJECT_DIR$/datamanager/tests/stockmapper_test.py" />
+        <option value="$PROJECT_DIR$/datamanager/database.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -83,11 +147,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="31" />
-    <option name="y" value="12" />
-    <option name="width" value="925" />
-    <option name="height" value="490" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="40" />
+    <option name="y" value="16" />
+    <option name="width" value="1155" />
+    <option name="height" value="612" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -102,22 +166,6 @@
               <item name="moon" type="b2602c69:ProjectViewProjectNode" />
               <item name="moon" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="moon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="moon" type="462c0819:PsiDirectoryNode" />
-              <item name="datamanager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="moon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="moon" type="462c0819:PsiDirectoryNode" />
-              <item name="datamanager" type="462c0819:PsiDirectoryNode" />
-              <item name="tusharemapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="moon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="moon" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -128,7 +176,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\dev\tiny_ubuntu\dev\moon\datamanager\tests" />
+      <recent name="C:\Users\user\dev\tiny_ubuntu\dev\moon\datamanager" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -142,29 +196,91 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="stockmapper" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python tests.Unittests in stockmapper_test.py">
+    <configuration name="Unittests for first_test.FirstTestCase" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="moon" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/datamanager/tusharemapper" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datamanager/tusharemapper/stockmapper.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;first_test.FirstTestCase&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
+    <configuration name="Unittests for stockmapper_test.StockMapper_TestCase.test_stock_sync_fromcsv" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="moon" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/datamanager/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;stockmapper_test.StockMapper_TestCase.test_stock_sync_fromcsv&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
+    <configuration name="Unittests for stockmapper_test.StockMapper_TestCase.test_stocksync_insert_fromcsv" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="moon" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/datamanager/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;stockmapper_test.StockMapper_TestCase.test_stocksync_insert_fromcsv&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
+    <configuration name="Unittests for stockmapper_test.StockMapper_TestCase.test_stocksync_update" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="moon" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/datamanager/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;stockmapper_test.StockMapper_TestCase.test_stocksync_update&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
+    <configuration name="Unittests in stockmapper_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="moon" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/datamanager/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/datamanager/tests/stockmapper_test.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <list>
+      <item itemvalue="Python tests.Unittests for stockmapper_test.StockMapper_TestCase.test_stock_sync_fromcsv" />
+      <item itemvalue="Python tests.Unittests for first_test.FirstTestCase" />
+      <item itemvalue="Python tests.Unittests for stockmapper_test.StockMapper_TestCase.test_stocksync_update" />
+      <item itemvalue="Python tests.Unittests in stockmapper_test.py" />
+      <item itemvalue="Python tests.Unittests for stockmapper_test.StockMapper_TestCase.test_stocksync_insert_fromcsv" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.stockmapper" />
+        <item itemvalue="Python tests.Unittests in stockmapper_test.py" />
+        <item itemvalue="Python tests.Unittests for stockmapper_test.StockMapper_TestCase.test_stocksync_insert_fromcsv" />
+        <item itemvalue="Python tests.Unittests for stockmapper_test.StockMapper_TestCase.test_stocksync_update" />
+        <item itemvalue="Python tests.Unittests for stockmapper_test.StockMapper_TestCase.test_stock_sync_fromcsv" />
+        <item itemvalue="Python tests.Unittests for first_test.FirstTestCase" />
       </list>
     </recent_temporary>
   </component>
@@ -181,6 +297,38 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_for_stockmapper_test_StockMapper_TestCase_test_stocksync_insert_fromcsv - 2018.10.04 at 20h 10m 33s.xml">
+      <configuration name="Unittests for stockmapper_test.StockMapper_TestCase.test_stocksync_insert_fromcsv" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_stockmapper_test_StockMapper_TestCase_test_stocksync_insert_fromcsv - 2018.10.04 at 20h 10m 46s.xml">
+      <configuration name="Unittests for stockmapper_test.StockMapper_TestCase.test_stocksync_insert_fromcsv" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_stockmapper_test_StockMapper_TestCase_test_stocksync_insert_fromcsv - 2018.10.04 at 20h 11m 36s.xml">
+      <configuration name="Unittests for stockmapper_test.StockMapper_TestCase.test_stocksync_insert_fromcsv" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_stockmapper_test_py - 2018.10.04 at 20h 12m 28s.xml">
+      <configuration name="Unittests in stockmapper_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_stockmapper_test_py - 2018.10.04 at 20h 15m 23s.xml">
+      <configuration name="Unittests in stockmapper_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_stockmapper_test_py - 2018.10.04 at 20h 18m 01s.xml">
+      <configuration name="Unittests in stockmapper_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_stockmapper_test_py - 2018.10.04 at 20h 19m 32s.xml">
+      <configuration name="Unittests in stockmapper_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_stockmapper_test_py - 2018.10.04 at 20h 21m 34s.xml">
+      <configuration name="Unittests in stockmapper_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_stockmapper_test_py - 2018.10.04 at 20h 22m 57s.xml">
+      <configuration name="Unittests in stockmapper_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_stockmapper_test_py - 2018.10.04 at 20h 24m 03s.xml">
+      <configuration name="Unittests in stockmapper_test.py" configurationId="tests" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
@@ -188,7 +336,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.5013405" side_tool="true" weight="0.46219686" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.32952926" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.58915836" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
       <window_info anchor="bottom" id="Terminal" />
@@ -197,7 +345,7 @@
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="SciView" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49865952" weight="0.28673324" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49865952" weight="0.5192582" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -216,13 +364,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/datamanager/tusharemapper/stockmapper.py</url>
-          <line>104</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -230,11 +371,31 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="17" />
+      <option name="time" value="46" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>database.db_session.</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>achieved_row.index</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>df.index</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>row.index</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>row.name</expression-string>
         <language-id>Python</language-id>
@@ -265,21 +426,6 @@
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>row[columnName]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>row.index</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>row</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
@@ -290,20 +436,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datamanager/tusharemapper/stockmapper.py">
+    <entry file="file://$PROJECT_DIR$/datamanager/tusharemapper/dailyrecordmapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="76" column="51" lean-forward="true" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="51" />
+        <state relative-caret-position="132">
+          <caret line="6" column="57" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/basemodel.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datamanager/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/tests/first_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/database.py">
+    <entry file="file://$PROJECT_DIR$/project/tests/console_test.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datamanager/tusharemapper/stockmapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1166">
-          <caret line="10" column="89" lean-forward="true" selection-start-line="10" selection-start-column="89" selection-end-line="10" selection-end-column="89" />
+        <state relative-caret-position="233">
+          <caret line="90" column="77" selection-start-line="90" selection-start-column="77" selection-end-line="90" selection-end-column="77" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/remote_sources/-1743092470/201545290/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1098">
+          <caret line="602" column="35" lean-forward="true" selection-start-line="602" selection-start-column="35" selection-end-line="602" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datamanager/datareader/stockreader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="61" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datamanager/tests/stockmapper_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datamanager/database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="29" />
           <folding>
             <element signature="e#0#93#0" expanded="true" />
           </folding>
@@ -313,7 +516,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
         </state>
       </provider>
     </entry>

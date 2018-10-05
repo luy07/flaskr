@@ -1,20 +1,21 @@
 from sqlalchemy import create_engine, Column, Integer, String, DateTime, Date,DECIMAL,Boolean
 from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy.ext.declarative import declarative_base
-from . import config
+from datamanager import config
 
 engine = create_engine(config.DATABASE_URI, convert_unicode=True, **config.DATABASE_CONNECT_OPTIONS)
+db_session = scoped_session(sessionmaker(bind=engine, autocommit=False, autoflush=False))
+
+class _Base(object):
+    pass
+    # query= db_session.query_property()
 
 Model = declarative_base(name='Model')
 
-# Model.query = db_session.query_property()
-db_session = scoped_session(sessionmaker(bind=engine, autocommit=False, autoflush=False))
-
-
-def init_db():
+def init_db(connection_uri):
+    # tmp_engine= create_engine(connection_uri, convert_unicode=True, **config.DATABASE_CONNECT_OPTIONS)
     Model.metadata.drop_all(bind=engine)
     Model.metadata.create_all(bind=engine)
-
 
 class TradeModel:
     """
@@ -35,7 +36,7 @@ class Stock(Model):
     __tablename__ = 'stocks'
     code = Column(String(50), primary_key=True)
     name = Column(String(50))
-    isdel=Column(Boolean)
+    isdel=Column(Boolean,default=False)
     intro = Column(String(500))
     tag = Column(String(500))  # 板块标签，逗号分隔
     industry = Column(String(50))  # 所属行业
