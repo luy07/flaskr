@@ -3,25 +3,27 @@ from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy.ext.declarative import declarative_base
 from datamanager import config
 
-engine = create_engine(config.DATABASE_URI, convert_unicode=True, **config.DATABASE_CONNECT_OPTIONS)
-db_session = scoped_session(sessionmaker(bind=engine, autocommit=False, autoflush=False))
+def get_connection():
+    if config.TEST is True:
+        return create_engine(config.TEST_DATABASE_URI, convert_unicode=True, **config.TEST_DATABASE_CONNECT_OPTIONS)
+    return create_engine(config.DATABASE_URI, convert_unicode=True,**config.DATABASE_CONNECT_OPTIONS)
 
-class _Base(object):
-    pass
-    # query= db_session.query_property()
+engine=get_connection()
+db_session=scoped_session(sessionmaker(bind=engine, autocommit=False, autoflush=False))
 
-Model = declarative_base(name='Model')
+Base = declarative_base(name='Model')
 
-def init_db(connection_uri):
-    # tmp_engine= create_engine(connection_uri, convert_unicode=True, **config.DATABASE_CONNECT_OPTIONS)
-    Model.metadata.drop_all(bind=engine)
-    Model.metadata.create_all(bind=engine)
+def create_all():
+    Base.metadata.create_all(engine)
+
+def drop_all():
+    db_session.session_factory.close_all()
+    Base.metadata.drop_all(engine)
 
 class TradeModel:
     """
     主要交易字段
     """
-    price = Column(DECIMAL(10,2))  # 最新价
     volume = Column(Integer)  # 成交量
     change = Column(DECIMAL(10,2))  # 涨跌值，真实小数（非百分比）
     open = Column(DECIMAL(10,2))
@@ -32,7 +34,7 @@ class TradeModel:
     relative_ratio = Column(DECIMAL(10,2))  # 量比
 
 
-class Stock(Model):
+class Stock(Base):
     __tablename__ = 'stocks'
     code = Column(String(50), primary_key=True)
     name = Column(String(50))
@@ -77,27 +79,30 @@ class Stock(Model):
         self.code = code
 
 
-class DailyRecord(Model, TradeModel):
+class DailyRecord(Base, TradeModel):
     id = Column(Integer, primary_key=True)
     __tablename__ = 'dailyrecords'
     code = Column(String(10))
     date = Column(Date)
+    def __init__(self,code):
+        self.code=code
 
 
-class MinutelyRecord(Model, TradeModel):
+class MinutelyRecord(Base, TradeModel):
     __tablename__ = 'minutelyrecords'
     id = Column(Integer, primary_key=True)
     code = Column(String(10))
     date = Column(Date)
     hour = Column(Integer)
     minute = Column(Integer)
+    price = Column(DECIMAL(10,2))  # 最新价
     # price = Column(DECIMAL(10,2))  # 当前价
     # volume = Column(Integer)  # 成交量
     # turnover_rate = Column(DECIMAL(10,2))  # 换手率
     # relative_ratio = Column(DECIMAL(10,2))  # 量比
 
 
-class Discovery(Model):
+class Discovery(Base):
     __tablename__ = 'discovery'
     id = Column(Integer, primary_key=True)
     code = Column(String(10))
@@ -108,7 +113,7 @@ class Discovery(Model):
     description = Column(String(100))
 
 
-class UpdateLog(Model):
+class UpdateLog(Base):
     __tablename__ = 'updatelogs'
     id = Column(Integer, primary_key=True)
     code = Column(String(10))

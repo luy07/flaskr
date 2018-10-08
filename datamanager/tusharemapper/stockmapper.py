@@ -3,7 +3,6 @@ from decimal import Decimal
 from pandas.core.series import Series
 from datamanager.database import db_session, Stock
 
-
 def sync_stock(df):
     insert_queue = []
     update_queue = []
@@ -19,13 +18,16 @@ def sync_stock(df):
         print('update total %s record  ' % len(update_queue))
     if len(insert_queue) == 0 and len(update_queue) == 0:
         print('not any record need insert or update')
-        return
+        return 0, 0
 
     try:
         db_session.commit()
         db_session.close()
     except Exception as ex:
         print('sqlalchemy execution occur exception,args:%s' % ex.args)
+        return -1,-1
+
+    return len(insert_queue), len(update_queue)
 
 
 def insert_or_update(row, insert_queue, update_queue):
@@ -64,6 +66,11 @@ def row_to_stock(row):
 
     new_stock = Stock(code)
     for columnName in row.index:
+        if str.lower(columnName) =='timetomarket':
+            row_value=str(row[columnName])
+            if len(row_value)==8:
+                setattr(new_stock, columnName, datetime.datetime.strptime(row_value, '%Y%m%d').date())
+                continue
         setattr(new_stock, columnName, row[columnName])
     return new_stock
 
@@ -94,10 +101,3 @@ def update_stock(achieved_row, exist_stock):
     return has_change
 
 
-
-# if __name__ == '__main__':
-#     import pandas as pd
-#     df = pd.read_csv('/home/vagrant/data/tmp/get_stock_basics_df.csv',
-#                      converters={'code': lambda x: str(x), 'esp': lambda y: round(float(y), 3)})
-#     df = df[0:100].set_index('code')  # 数据截断，并指定code列为索引
-#     sync_stock(df)
