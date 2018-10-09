@@ -1,6 +1,6 @@
 import unittest
 from datamanager import config
-config.TEST=False
+config.TEST=True
 import pandas as pd
 from datamanager import database
 from datamanager.tusharemapper import dailyrecordmapper
@@ -10,9 +10,10 @@ class DailylrecordMapperTest(unittest.TestCase):
     def setUp(self):
         database.drop_all()
         database.create_all()
+
     def tearDown(self):
-        # database.drop_all()
-        pass
+        database.drop_all()
+
     def get_df(self):
         df = pd.read_csv('/home/vagrant/data/tmp/rdgf_daily.csv', converters={'code': lambda x: str(x)})
         # df = pd.read_csv('/home/vagrant/data/tmp/rdgf_daily.csv')

@@ -9,17 +9,16 @@ from datamanager import database
 class StockMapper_TestCase(unittest.TestCase):
 
     def setUp(self):
-        database.drop_all()
         database.create_all()
+        pass
 
     def tearDown(self):
-        # database.drop_all()
+        database.drop_all()
         pass
 
     def get_df(self):
-        df = pd.read_csv('/home/vagrant/data/tmp/get_stock_basics_df.csv',
-                         converters={'code': lambda x: str(x), 'esp': lambda y: round(float(y), 3)})
-        df = df[0:10].set_index('code')  # 数据截断，并指定code列为索引
+        df = pd.read_csv('/home/vagrant/data/tmp/get_stock_basics_df.csv',converters={'code': lambda x: str(x), 'esp': lambda y: round(float(y), 3)})
+        df = df.set_index('code')  # 数据截断，并指定code列为索引
         return df
 
     # @unittest.skip('ok')

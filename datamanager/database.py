@@ -6,6 +6,7 @@ from datamanager import config
 def get_connection():
     if config.TEST is True:
         return create_engine(config.TEST_DATABASE_URI, convert_unicode=True, **config.TEST_DATABASE_CONNECT_OPTIONS)
+
     return create_engine(config.DATABASE_URI, convert_unicode=True,**config.DATABASE_CONNECT_OPTIONS)
 
 engine=get_connection()
@@ -25,12 +26,13 @@ class TradeModel:
     主要交易字段
     """
     volume = Column(Integer)  # 成交量
-    change = Column(DECIMAL(10,2))  # 涨跌值，真实小数（非百分比）
+    price_change = Column(DECIMAL(10,2))  # 涨跌值
+    p_change= Column(DECIMAL(10,2))  # 涨跌率，真实小数（非百分比）
     open = Column(DECIMAL(10,2))
     close = Column(DECIMAL(10,2))
     high = Column(DECIMAL(10,2))
     low = Column(DECIMAL(10,2))
-    turnover_rate = Column(DECIMAL(10,2))  # 换手率
+    turnover = Column(DECIMAL(10,2))  # 换手率
     relative_ratio = Column(DECIMAL(10,2))  # 量比
 
 
@@ -52,20 +54,19 @@ class Stock(Base):
     pe = Column(DECIMAL(10,2))  # 市盈率
     pb = Column(DECIMAL(10,2))  # 市净率
     # 总值
-    capitalization = Column(DECIMAL(10,2))  # 市值
+    capitalization = Column(DECIMAL(10,2))  # 市值(亿)
     outstanding = Column(DECIMAL(10,2))  # 流通股本(亿)
     totals = Column(DECIMAL(10,2))  # 总股本(亿)
     holders = Column(Integer)  # 股东人数
-    totalAssets = Column(DECIMAL(10,2))  # 总资产(万)
-    liquidAssets = Column(DECIMAL(10,2))  # 流动资产
-    fixedAssets = Column(DECIMAL(10,2))  # 固定资产
-    reserved = Column(DECIMAL(10,2))  # 公积金
-    undp = Column(DECIMAL(10,2))  # 未分利润
+    totalAssets = Column(DECIMAL(13,2))  # 总资产(万)
+    liquidAssets = Column(DECIMAL(13,2))  # 流动资产(万)
+    fixedAssets = Column(DECIMAL(13,2))  # 固定资产(万)
+    reserved = Column(DECIMAL(13,2))  # 公积金(万)
+    undp = Column(DECIMAL(13,2))  # 未分利润(万)
     # 每股
     reservedPerShare = Column(DECIMAL(10,3))  # 每股公积金
     esp = Column(DECIMAL(10,3))  # 每股收益
     bvps = Column(DECIMAL(10,3))  # 每股净资
-    pb = Column(DECIMAL(10,2))  # 市净率
     perundp = Column(DECIMAL(10,3))  # 每股未分配
     # 利润&增长
     gpr = Column(DECIMAL(10,2))  # 毛利率(%)
@@ -84,6 +85,12 @@ class DailyRecord(Base, TradeModel):
     __tablename__ = 'dailyrecords'
     code = Column(String(10))
     date = Column(Date)
+    ma5=Column(DECIMAL(10,2))
+    ma10=Column(DECIMAL(10,2))
+    ma20=Column(DECIMAL(10,2))
+    v_ma5=Column(DECIMAL(10,2))
+    v_ma10=Column(DECIMAL(10,2))
+    v_ma20=Column(DECIMAL(10,2))
     def __init__(self,code):
         self.code=code
 

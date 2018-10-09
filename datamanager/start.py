@@ -28,4 +28,5 @@ def sync_dailyrecords(start_date, end_date):
 
 
 if __name__ == '__main__':
-    pass
+    sync_stocks()
+    sync_dailyrecords('2017-01-01','2018-10-09')
