@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>home</title>
+    <script src="../static/script/jquery-1.10.2.min.js"></script>
+    <script>
+        var global_socket;
+
+        function run_test() {
+            var socket = new WebSocket('ws://' + window.location.host + '/ws_test')
+            global_socket = socket;
+            socket.onopen = function () {
+                console.info('socket is open');
+                socket.send($('#txtbox').val())
+            };
+
+            socket.onmessage = function (e) {
+                write_to_box(e.data)
+            };
+
+            socket.onclose = function (e) {
+                write_to_box('socket is closed,code:%s,reason:%s' % e.code, e.reason)
+            }
+        }
+
+        function write_to_box(str) {
+            $('#response_span').prepend('<p>' + str + '</p>')
+        }
+
+        function stop_test() {
+            if (global_socket != undefined)
+                return;
+                global_socket.close();
+        }
+    </script>
 </head>
 <body>
 <h1>home page</h1>
 <a href="/backend">>>后台</a>
+
+<div>
+    <input type="text" id="txtbox" style="width:200px; height: auto;"/>
+    <input type="button" onclick="run_test()" value="start socket"/>
+    <input type="button" onclick="stop_test()" value="stop socket"/>
+
+</div>
+<label>response:</label>
+<span id="response_span"></span>
 </body>
 </html>

@@ -1,6 +1,7 @@
 from flask import  Flask,url_for,render_template
-
+from flask_sockets import Sockets
 app=Flask(__name__)
+socket=Sockets(app)
 
 app.secret_key=b'\xfc\xc0\x8a0<~\x1d\x1c\x98o\xf1\x7fZQ \xd7\x0c\x9cy\x14\x14\xc2\xe4\r'
 
@@ -8,7 +9,8 @@ app.secret_key=b'\xfc\xc0\x8a0<~\x1d\x1c\x98o\xf1\x7fZQ \xd7\x0c\x9cy\x14\x14\xc
 from project.views import home
 from project.views import backend
 
-app.register_blueprint(home.mod)
+app.register_blueprint(home.html)
+socket.register_blueprint(home.ws)
 app.register_blueprint(backend.mod)
 
 @app.errorhandler(404)
