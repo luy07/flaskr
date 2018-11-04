@@ -1,4 +1,5 @@
 from flask import Blueprint,url_for,render_template,make_response,session,Markup,current_app
+from datamanager.datareader import stockreader
 
 mod=Blueprint('backend',__name__,url_prefix='/backend')
 
@@ -6,7 +7,8 @@ mod=Blueprint('backend',__name__,url_prefix='/backend')
 @mod.route('/index')
 def index():
     tmpt = Markup.escape(u'<strong>Hello %s!</strong>' % '<blink>hacker</blink>')
-    content= render_template('backend/index.html',tmpt=tmpt)
+    stocks=stockreader.get_all_stocks()
+    content= render_template('backend/index.html',stocks=stocks[0:100])
     resp=make_response(content)
     resp.set_cookie('username','luy')
     return  resp

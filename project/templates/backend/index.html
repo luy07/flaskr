@@ -1,7 +1,26 @@
 {% extends "base.html" %}
 
 {% block body %}
-    <ul>
-        <li><a href="{{ url_for('.sitemap') }}">site map</a></li>
-    </ul>
+    <table>
+        <thead>
+        <tr>
+            <td>代码</td>
+            <td>名称</td>
+            <td>价格</td>
+            <td>市盈率</td>
+            <td>市值</td>
+        </tr>
+        </thead>
+        <tbody>
+        {% for stock in stocks %}
+            <tr>
+                <td>{{ stock.code }}</td>
+                <td>{{ stock.name }}</td>
+                <td></td>
+                <td>{{ stock.pe }}</td>
+                <td>{{ stock.capitalization }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}
